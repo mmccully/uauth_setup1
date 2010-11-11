@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+Item.delete_all
+Item.create(:color=> "Yellow", :desc => "Pencil")
+Item.create(:color=> "Blue", :desc => "Pencil")
+Item.create(:color=> "Blue", :desc => "Expo Marker")
+Item.create(:color=> "Black", :desc => "Pilot Pen")
