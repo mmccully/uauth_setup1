@@ -15,8 +15,13 @@
     <td><%= item.color %></td>
     <td><%= item.desc %></td>
     <td><%= link_to 'Show', item %></td>
+
+    <% if can? :manage, @item %>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+
+
   </tr>
 <% end %>
 </table>

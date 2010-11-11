@@ -17,7 +17,14 @@
 
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
+  <p>
+    <%= f.label :roles %><br />
+    <% for role in User.valid_roles %>
+      <%= check_box_tag 'user[roles][]', role, @user.has_role?(role) %>
+      <%=h role.to_s %><br />
+    <% end %>
 
+  </p>
   <p><%= f.submit "Sign up" %></p>
 <% end %>
 

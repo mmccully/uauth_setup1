@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101111165309) do
+ActiveRecord::Schema.define(:version => 20101111202825) do
 
   create_table "items", :force => true do |t|
     t.string   "color"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20101111165309) do
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "roles_mask"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
