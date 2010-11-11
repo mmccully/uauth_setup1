@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Color:</b>
+  <%= @item.color %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @item.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
